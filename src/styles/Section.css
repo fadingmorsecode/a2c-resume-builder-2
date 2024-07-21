@@ -1,0 +1,68 @@
+.stretch {
+    display:inline-block;
+    --stretch-factor: 1.5;
+    -webkit-transform:scale(1, var(--stretch-factor)); /* Safari and Chrome */
+    -moz-transform:scale(1, var(--stretch-factor)); /* Firefox */
+    -ms-transform:scale(1, var(--stretch-factor)); /* IE 9 */
+    -o-transform:scale(1, var(--stretch-factor)); /* Opera */
+    transform:scale(1, var(--stretch-factor)); /* W3C */
+}
+
+.section-header:hover {
+    cursor: pointer;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fas, .fa-medal, .fa-church {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.section-title {
+    display: flex;
+    gap: 10px;
+}
+
+.section-title.is-optional {
+    gap: 0;
+}
+
+.section-content {
+    position: relative;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transform-origin: top;
+  }
+
+.section-content.open {
+    transition: transform, visibility, height, opacity;
+    transition-duration: 0.2s;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transform: translateY(0);
+    padding-bottom: 0.5rem;
+}
+
+.expand-arrow {
+    margin-top: 4px;
+    margin-right: 1rem;
+    color: rgb(192, 191, 191);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transform: rotate(90deg);
+    transition: transform 0.2s;
+}
+
+.expand-arrow.open {
+    transition: transform 0.2s;
+    transform: rotate(0);
+}
+

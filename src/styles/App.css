@@ -1,0 +1,119 @@
+body {
+    min-width: fit-content;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* --main-bg-color: rgb(245, 230, 216);
+    --input-bg-color: rgb(253, 246, 236); */
+    --main-bg-color: rgb(210 213 224);
+    --input-bg-color: rgb(228 231 236);
+    --resume2-bg-color: #355E3B;
+    --resume-font: 'Times New Roman', Times, serif;
+}
+#root {
+    /* min-width: calc(23.25cm + 12rem); */
+    padding: 2.5vh 1vw 2.5vh;
+    display: flex;
+    gap: 2rem;
+    /* main background color */
+   
+}
+
+#root, body, .edit-side, .display-side, .utility {
+    background-color: var(--main-bg-color);
+}
+
+h2 {
+    font-weight: 650;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    margin-left: 0.25rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--input-bg-color);
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.section-content {
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.edit-side {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 30rem;
+}
+
+.content-box{
+    padding: 1.5rem;
+    border: transparent;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: white;
+    
+}
+
+.personal-section {
+    padding: 1.75rem 1.5rem;
+    padding-bottom: 0;
+}
+
+.edit-side .content-box:not(.customize-section) {
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.add-form {
+    margin-top: 1rem;
+    border: 10px;
+    border-radius: 50%;
+    padding: 4px 8px 6px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(216, 142, 142);
+}
+
+.add-form:hover {
+    color: rgb(216, 142, 142);
+    background-color: white;
+}
+.utility {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.utility button {
+    font-size: 1rem;
+    flex-basis: 30%;
+    border-radius: 5px;
+    border: transparent;
+    padding: 3px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+}
+
+.utility button:hover {
+    border: 1px solid black;
+    transform: scale(1.1);
+    flex-grow: 0;
+}
+
+.customize {
+    background-color: var(--main-bg-color);
+}
